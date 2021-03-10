@@ -20,6 +20,7 @@ class RecentMeasurement {
           child: ListTile(
             title: Expanded(
               child: Card(
+                margin: EdgeInsets.only(top: 25.0),
                 child: Column(
                   children: <Widget>[
                     Text('Current Weight: ' + doc['weight'] + 'kg'),

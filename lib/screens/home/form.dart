@@ -6,17 +6,18 @@ class FormText extends StatelessWidget {
   final String _labelText = 'Enter your weight..';
   final String _buttonText = 'Save';
 
-  final controller = TextEditingController();
+  final _controller = TextEditingController();
 
   final dateFormat = new DateFormat.yMMMMd().add_jm();
 
-  final collection = FirebaseFirestore.instance.collection('weightMeasurement');
+  final _collection =
+      FirebaseFirestore.instance.collection('weightMeasurement');
 
   void saveItemToList() {
-    final weight = controller.text;
+    final weight = _controller.text;
 
     if (weight.isNotEmpty) {
-      collection.add({
+      _collection.add({
         'weight': weight,
         'time': dateFormat.format(DateTime.now()),
       });
@@ -24,7 +25,7 @@ class FormText extends StatelessWidget {
       return null;
     }
 
-    controller.clear();
+    _controller.clear();
   }
 
   @override
@@ -34,7 +35,7 @@ class FormText extends StatelessWidget {
         Expanded(
           child: TextField(
             keyboardType: TextInputType.number,
-            controller: controller,
+            controller: _controller,
             decoration: InputDecoration(
               labelText: _labelText,
             ),

@@ -10,11 +10,13 @@ class Home extends StatefulWidget {
 class _HomeState extends State<Home> {
   final ServiceAuth _auth = ServiceAuth();
 
+  final _appBarText = 'Weight Tracker';
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Weight Tracker'),
+        title: Text('$_appBarText'),
         backgroundColor: Colors.green[500],
         centerTitle: true,
         actions: <Widget>[
