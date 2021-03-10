@@ -12,7 +12,9 @@ class Wrapper extends StatelessWidget {
 
     print(mainUser);
 
-    // Let's return either Authenticate or Home Widget dependently
+    // let's return either Authenticate or Home Widget dependently
+    // if user isn't logged in, displaying Authenticate widget
+    // if it is, displaying Home widget
     return mainUser == null ? Authenticate() : Home();
   }
 }

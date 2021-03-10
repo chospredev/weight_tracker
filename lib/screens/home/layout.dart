@@ -4,6 +4,7 @@ import 'package:weight_tracker/screens/home/form.dart';
 import 'package:weight_tracker/screens/home/measurements.dart';
 
 class Layout extends StatelessWidget {
+  // layout which displays form and list
   @override
   Widget build(BuildContext context) {
     return Padding(

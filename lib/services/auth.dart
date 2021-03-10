@@ -10,7 +10,7 @@ class ServiceAuth {
     return user != null ? MainUser(uid: user.uid) : null;
   }
 
-  // changing user => stream
+  // tracking the user through stream
 
   Stream<MainUser> get user {
     return _auth
@@ -30,7 +30,7 @@ class ServiceAuth {
     }
   }
 
-  // logout
+  // logging out
 
   Future logout() async {
     try {

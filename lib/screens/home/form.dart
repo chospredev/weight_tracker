@@ -8,11 +8,13 @@ class FormText extends StatelessWidget {
 
   final _controller = TextEditingController();
 
+  // using DateFormat class to format date and time from collection
   final dateFormat = new DateFormat.yMMMMd().add_jm();
 
   final _collection =
       FirebaseFirestore.instance.collection('weightMeasurement');
 
+  // function that helps us save the input inside the Firestore
   void saveItemToList() {
     final weight = _controller.text;
 
